@@ -1,7 +1,5 @@
 # Studdent-With-Subject-
 
-Certainly! Here’s a rephrased and professionally formatted guide for setting up and running your project:
-
 Setup and Running Instructions
 Backend Setup
 Clone the Repository
