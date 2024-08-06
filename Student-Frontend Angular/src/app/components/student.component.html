@@ -1,0 +1,61 @@
+<div class="container">
+    <!-- Students List -->
+    <h2>Students</h2>
+    <ul>
+      <li *ngFor="let student of students">
+        <strong>{{ student.name }}</strong>
+        <ul>
+          <li *ngFor="let subject of student.subjects">
+            {{ subject.name }}
+          </li>
+        </ul>
+        <button (click)="deleteStudent(student.studentId!)">Delete Student</button>
+      </li>
+    </ul>
+    
+    <!-- Add Student Form -->
+    <div class="form-container">
+      <h3>Add Student</h3>
+      <form (ngSubmit)="addStudent()">
+        <label for="studentName">Name:</label>
+        <input id="studentName" [(ngModel)]="student.name" name="name" required />
+        <button type="submit">Add Student</button>
+      </form>
+    </div>
+    
+    <!-- Subjects List -->
+    <h2>Subjects</h2>
+    <ul>
+      <li *ngFor="let subject of subjects">
+        {{ subject.name }}
+        <button (click)="deleteSubject(subject.subjectId!)">Delete Subject</button>
+      </li>
+    </ul>
+    
+    <!-- Add Subject Form -->
+    <div class="form-container">
+      <h3>Add Subject</h3>
+      <form (ngSubmit)="addSubject()">
+        <label for="subjectName">Name:</label>
+        <input id="subjectName" [(ngModel)]="subject.name" name="name" required />
+        <button type="submit">Add Subject</button>
+      </form>
+    </div>
+    
+    <!-- Enroll Student in Subject -->
+    <div class="form-container">
+      <h3>Enroll Student in Subject</h3>
+      <label for="studentSelect">Select Student:</label>
+      <select id="studentSelect" [(ngModel)]="selectedStudentId">
+        <option *ngFor="let student of students" [value]="student.studentId">{{ student.name }}</option>
+      </select>
+  
+      <label for="subjectSelect">Select Subject:</label>
+      <select id="subjectSelect" [(ngModel)]="selectedSubjectId">
+        <option *ngFor="let subject of subjects" [value]="subject.subjectId">{{ subject.name }}</option>
+      </select>
+  
+      <button (click)="enrollStudentInSubject()">Enroll</button>
+    </div>
+  </div>
+  
