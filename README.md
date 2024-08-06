@@ -6,7 +6,7 @@ Clone the Repository
 
 To get started, clone the repository by using the following link or download it as a ZIP file:
 
-Repository Link: https://github.com/AkshayRJ28/Studdent-With-Subject-.git
+Repository Link: [https://github.com/AkshayRJ28/Studdent-With-Subject-.git](https://github.com/AkshayRJ28/Studdent-With-Subject-.git)
 change branch to master from main
 Import the Backend Project into Eclipse
 
